@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ThreadInMotion.Library.DataAccessLayer\ThreadInMotion.Library.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\ThreadInMotion.Library.SharedModels\ThreadInMotion.Library.SharedModels.csproj" />
+  </ItemGroup>
+
+</Project>

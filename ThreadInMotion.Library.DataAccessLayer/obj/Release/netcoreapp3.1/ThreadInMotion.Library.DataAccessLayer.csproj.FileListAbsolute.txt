@@ -1,0 +1,12 @@
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\bin\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.deps.json
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\bin\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\bin\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.pdb
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\bin\Release\netcoreapp3.1\ThreadInMotion.Library.SharedModels.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\bin\Release\netcoreapp3.1\ThreadInMotion.Library.SharedModels.pdb
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.csprojAssemblyReference.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.AssemblyInfo.cs
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.csproj.CopyComplete
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.DataAccessLayer\obj\Release\netcoreapp3.1\ThreadInMotion.Library.DataAccessLayer.pdb

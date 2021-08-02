@@ -1,0 +1,9 @@
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\bin\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.deps.json
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\bin\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\bin\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.pdb
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.csprojAssemblyReference.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.AssemblyInfoInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.AssemblyInfo.cs
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.csproj.CoreCompileInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.SharedModels\obj\Debug\netcoreapp3.1\ThreadInMotion.Library.SharedModels.pdb
