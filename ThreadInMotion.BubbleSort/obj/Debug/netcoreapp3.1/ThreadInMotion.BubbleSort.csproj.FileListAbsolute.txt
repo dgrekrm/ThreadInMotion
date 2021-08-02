@@ -1,0 +1,13 @@
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.exe
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.deps.json
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.runtimeconfig.json
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.runtimeconfig.dev.json
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\bin\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.pdb
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.csprojAssemblyReference.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.AssemblyInfoInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.AssemblyInfo.cs
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.csproj.CoreCompileInputs.cache
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.dll
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.pdb
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.BubbleSort\obj\Debug\netcoreapp3.1\ThreadInMotion.BubbleSort.genruntimeconfig.cache
