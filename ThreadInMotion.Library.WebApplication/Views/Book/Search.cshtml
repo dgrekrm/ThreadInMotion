@@ -38,6 +38,7 @@
                         '<th scope="col">Kitap Adı</th>' +
                         '<th scope="col">Isbn</th>' +
                         '<th scope="col">Yazar</th>' +
+                        '<th scope="col">Kitap Boşta Mı ? </th>' +
                         '</tr>' +
                         '</thead>' +
                         '<tbody>';
@@ -47,10 +48,12 @@
                             '<td>' + result.result[i].name + '</td>' +
                             '<td>' + result.result[i].isbn + '</td>' +
                             '<td>' + result.result[i].author + '</td>' +
+                            '<td>' + ('<button onclick="toggleBook(' + result.result[i].id + ',' + result.result[i].isAvailable + ')" type="button" class="btn btn-sm btn-primary" ' + (result.result[i].isAvailable ? '' : 'disabled') + '>' + (result.result[i].isAvailable ? 'Kitabı Ver' : 'Kitabı Al') + '</button>') + '</td>' +
                             '</tr>';
                     }
                     tableString += '</tbody></table>';
                     $('#result').html(tableString);
+
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     if (jqXHR.responseText) {
@@ -59,5 +62,25 @@
                 }
             });
         }
+
+        function toggleBook(bookId, isAvailable) {
+            if (isAvailable) {
+                assign(bookId);
+            } else {
+                unAssign(bookId);
+            }
+        }
+
+        function assign(bookId) {
+            window.location.href = window.location.origin + '/BookTransactions/AssignBookToMember?bookId=' + bookId;
+        }
+
+        function unAssing(bookId) {
+            //$.ajax({
+            //    url:
+            //})
+        }
+
+
     </script>
 }

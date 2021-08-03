@@ -50,3 +50,4 @@ C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.WebApplicatio
 C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Book\Create.cshtml.g.cs
 C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Member\Create.cshtml.g.cs
 C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\Book\Search.cshtml.g.cs
+C:\Users\edeger\source\repos\ThreadInMotion\ThreadInMotion.Library.WebApplication\obj\Debug\netcoreapp3.1\Razor\Views\BookTransactions\AssignBookToMember.cshtml.g.cs

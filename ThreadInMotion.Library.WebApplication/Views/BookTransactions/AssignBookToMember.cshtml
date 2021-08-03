@@ -1,0 +1,25 @@
+﻿@using ThreadInMotion.Library.SharedModels.Models;
+
+@{
+    var members = ViewBag.Members as List<Member>;
+    var bookId = (int)ViewBag.BookId;
+}
+
+<p>@ViewBag.BookName</p>
+
+<select class="custom-select">
+    @for (int i = 0; i < members.Count; i++)
+    {
+        <option value="@(members[i].Id)"> @members[i].FullName </option>
+    }
+</select>
+
+<button type="button" onclick="assingBook()"> Kitabı Seçili Kişiye Ver </button>
+
+@section scripts{
+    <script>
+        function assingBook() {
+
+        }
+    </script>
+} 

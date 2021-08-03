@@ -20,5 +20,7 @@ namespace ThreadInMotion.Library.SharedModels.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Isbn alanı zorunludur")]
         [RegularExpression("([1-9][0-9]*)", ErrorMessage = "Lütfen geçerli bir Isbn yazınız")]
         public string Isbn { get; set; }
+        public bool IsAvailable { get; set; }
+        public int Id { get; set; }
     }
 }

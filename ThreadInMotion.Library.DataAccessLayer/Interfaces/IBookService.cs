@@ -2,7 +2,7 @@
 
 namespace ThreadInMotion.Library.DataAccessLayer.Interfaces
 {
-    public interface IBookService : ICreateService<Book>, IReadService<Book>
+    public interface IBookService : ICreateService<Book>, IReadService<Book>, IDynamicQueryableService<Book>
     {
     }
 }

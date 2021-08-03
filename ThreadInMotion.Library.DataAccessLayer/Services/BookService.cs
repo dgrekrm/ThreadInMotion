@@ -38,6 +38,36 @@ namespace ThreadInMotion.Library.DataAccessLayer.Services
             }
         }
 
+        public IEnumerable<Book> GetEntities(string where = null)
+        {
+            var list = new List<Book> { };
+
+            if (string.IsNullOrWhiteSpace(where)) return list;
+
+            using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Books (NOLOCK) WHERE {where}", con))
+                {
+                    cmd.CommandType = CommandType.Text;
+
+                    con.Open();
+                    var reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        list.Add(new Book
+                        {
+                            Id = Convert.ToInt32(reader[nameof(Book.Id)]),
+                            Name = Convert.ToString(reader[nameof(Book.Name)]),
+                            Isbn = Convert.ToString(reader[nameof(Book.Isbn)]),
+                            Author = Convert.ToString(reader[nameof(Book.Author)]),
+                        });
+                    }
+                }
+            }
+            return list;
+        }
+
         public IEnumerable<Book> Read(Book entity)
         {
             var list = new List<Book> { };
@@ -58,12 +88,13 @@ namespace ThreadInMotion.Library.DataAccessLayer.Services
                     {
                         list.Add(new Book
                         {
+                            Id = Convert.ToInt32(reader[nameof(Book.Id)]),
                             Name = Convert.ToString(reader[nameof(Book.Name)]),
                             Isbn = Convert.ToString(reader[nameof(Book.Isbn)]),
-                            Author = Convert.ToString(reader[nameof(Book.Author)])
+                            Author = Convert.ToString(reader[nameof(Book.Author)]),
+                            IsAvailable = Convert.ToBoolean(reader[nameof(Book.IsAvailable)])
                         });
                     }
-
                 }
             }
             return list;

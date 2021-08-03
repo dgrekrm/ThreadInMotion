@@ -10,5 +10,6 @@ namespace ThreadInMotion.Library.SharedModels.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Ad-Soyad alanı zorunludur")]
         [RegularExpression("^[a-zA-Z ]*$", ErrorMessage = "Lütfen geçerli bir ad-soyad yazınız")]
         public string FullName { get; set; }
+        public int Id { get; set; }
     }
 }
