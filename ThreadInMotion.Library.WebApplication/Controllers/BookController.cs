@@ -1,36 +1,69 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using ThreadInMotion.Library.DataAccessLayer.Interfaces;
 using ThreadInMotion.Library.DataAccessLayer.Services;
 using ThreadInMotion.Library.SharedModels.Models;
+using System.Linq;
 
 namespace ThreadInMotion.Library.WebApplication.Controllers
 {
-    public class BookController
+    public class BookController : Controller
     {
-        private readonly BookService _bookService;
+        private readonly IBookService _bookService;
 
-        public BookController(BookService bookService)
+        public BookController(IBookService bookService)
         {
             _bookService = bookService;
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(new Book { });
+        }
+
+        [HttpPost]
         public IActionResult Create(Book book)
         {
             try
             {
-                var result = _bookService.Create(book);
-                return new JsonResult(new
+                if (!ModelState.IsValid)
                 {
-                    message = "Book registration is successfully",
-                    id = result
-                });
+                    return BadRequest(new { message = string.Join(Environment.NewLine, ModelState.Values.SelectMany(v => v.Errors).Select(s => s.ErrorMessage)) });
+                }
+                var result = _bookService.Create(book);
+                return StatusCode(200);
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
-                return new JsonResult(new {
-                    message = "an error occurred"
-                });
+                //TODO:Log here..
+                return StatusCode(500);
             }
 
         }
+
+        [HttpGet]
+        public IActionResult Search()
+        {
+            return View(new Book { });
+        }
+
+        [HttpPost]
+        public IActionResult GetBooks(Book book)
+        {
+            try
+            {
+                var result = _bookService.Read(book);
+                return Ok(new
+                {
+                    result = result
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500);
+            }
+        }
+
     }
 }

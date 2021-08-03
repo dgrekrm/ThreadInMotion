@@ -1,0 +1,63 @@
+﻿@model ThreadInMotion.Library.SharedModels.Models.Book
+
+<form id="bookSearchForm">
+    <div class="form-row">
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.Name, "Kitap Adı")
+            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.Isbn, "ISBN")
+            @Html.EditorFor(m => m.Isbn, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <div class="col-md-3">
+            @Html.LabelFor(m => m.Author, "Yazar")
+            @Html.EditorFor(m => m.Author, new { htmlAttributes = new { @class = "form-control" } })
+        </div>
+        <button type="button" class="btn btn-primary" onclick="searchBook();"> Ara </button>
+    </div>
+</form>
+
+<div id="result">
+
+</div>
+
+
+@section scripts{
+    <script>
+        function searchBook() {
+            $.ajax({
+                type: "POST",
+                url: '/Book/GetBooks',
+                data: $('#bookSearchForm').serialize(),
+                success: function (result) {
+                    var tableString = '<table class="table table-hover">' +
+                        '<thead>' +
+                        '<tr>' +
+                        '<th scope="col">#</th>' +
+                        '<th scope="col">Kitap Adı</th>' +
+                        '<th scope="col">Isbn</th>' +
+                        '<th scope="col">Yazar</th>' +
+                        '</tr>' +
+                        '</thead>' +
+                        '<tbody>';
+                    for (var i = 0; i < result.result.length; i++) {
+                        tableString += '<tr>' +
+                            '<th scope="row">' + (i + 1) + '</th>' +
+                            '<td>' + result.result[i].name + '</td>' +
+                            '<td>' + result.result[i].isbn + '</td>' +
+                            '<td>' + result.result[i].author + '</td>' +
+                            '</tr>';
+                    }
+                    tableString += '</tbody></table>';
+                    $('#result').html(tableString);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.responseText) {
+                        alert(JSON.parse(jqXHR.responseText).message);
+                    }
+                }
+            });
+        }
+    </script>
+}
