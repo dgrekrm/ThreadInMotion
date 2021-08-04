@@ -7,7 +7,7 @@
 
 <p>@ViewBag.BookName</p>
 
-<select class="custom-select">
+<select class="custom-select" id="memberId">
     @for (int i = 0; i < members.Count; i++)
     {
         <option value="@(members[i].Id)"> @members[i].FullName </option>
@@ -19,7 +19,19 @@
 @section scripts{
     <script>
         function assingBook() {
-
+            $.ajax({
+                type: "POST",
+                url: '/BookTransactions/AssignBookToMember',
+                data: { MemberId: $('#memberId').val(), BookId:@bookId},
+                success: function (result) {
+                    alert("Kitap kayıt işlemi başarıyla tamamlandı");
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.responseText) {
+                        alert(JSON.parse(jqXHR.responseText).message);
+                    }
+                }
+            });
         }
     </script>
 } 

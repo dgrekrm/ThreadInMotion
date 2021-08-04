@@ -48,7 +48,7 @@
                             '<td>' + result.result[i].name + '</td>' +
                             '<td>' + result.result[i].isbn + '</td>' +
                             '<td>' + result.result[i].author + '</td>' +
-                            '<td>' + ('<button onclick="toggleBook(' + result.result[i].id + ',' + result.result[i].isAvailable + ')" type="button" class="btn btn-sm btn-primary" ' + (result.result[i].isAvailable ? '' : 'disabled') + '>' + (result.result[i].isAvailable ? 'Kitabı Ver' : 'Kitabı Al') + '</button>') + '</td>' +
+                            '<td>' + ('<button onclick="toggleBook(' + result.result[i].id + ',' + result.result[i].isAvailable + ')" type="button" class="btn btn-sm btn-primary" >' + (result.result[i].isAvailable ? 'Kitabı Ver' : 'Kitabı Al') + '</button>') + '</td>' +
                             '</tr>';
                     }
                     tableString += '</tbody></table>';
@@ -75,10 +75,20 @@
             window.location.href = window.location.origin + '/BookTransactions/AssignBookToMember?bookId=' + bookId;
         }
 
-        function unAssing(bookId) {
-            //$.ajax({
-            //    url:
-            //})
+        function unAssign(bookId) {
+            $.ajax({
+                type: "POST",
+                url: '/BookTransactions/UnassignBook',
+                data: { bookId: bookId },
+                success: function (result) {
+                    alert('Kitap teslim işlemi gerçekleştirilmiştir');
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.responseText) {
+                        alert(JSON.parse(jqXHR.responseText).message);
+                    }
+                }
+            });
         }
 
 

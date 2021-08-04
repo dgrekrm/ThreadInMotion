@@ -5,7 +5,7 @@ using ThreadInMotion.Library.SharedModels.Models;
 
 namespace ThreadInMotion.Library.DataAccessLayer.Interfaces
 {
-    public interface IBookTransactionsService : ICreateService<BookTransaction>
+    public interface IBookTransactionsService : ICreateService<BookTransaction>, IUpdateService<BookTransaction>
     {
     }
 }

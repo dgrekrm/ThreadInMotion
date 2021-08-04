@@ -12,11 +12,14 @@ namespace ThreadInMotion.Library.WebApplication.Controllers
     {
         private readonly IBookService _bookService;
         private readonly IMemberService _memberService;
+        private readonly IBookTransactionsService _bookTransactionsService;
 
-        public BookTransactionsController(IBookService bookService, IMemberService memberService)
+
+        public BookTransactionsController(IBookService bookService, IMemberService memberService, IBookTransactionsService bookTransactionsService)
         {
             _bookService = bookService;
             _memberService = memberService;
+            _bookTransactionsService = bookTransactionsService;
         }
 
         [HttpGet]
@@ -35,6 +38,38 @@ namespace ThreadInMotion.Library.WebApplication.Controllers
             ViewBag.Members = members.ToList();
             return View();
         }
+        [HttpPost]
+        public IActionResult AssignBookToMember(BookTransaction bookTransaction)
+        {
+            try
+            {
+                bookTransaction.ExitDate = DateTime.Now;
+                _bookTransactionsService.Create(bookTransaction);
+
+                return StatusCode(200);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+
+        }
+        [HttpPost]
+        public IActionResult UnassignBook(int bookId)
+        {
+            try
+            {
+                _bookTransactionsService.Update(new BookTransaction { BookId = bookId });
+
+                return StatusCode(200);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
+
+        }
+
 
     }
 }
