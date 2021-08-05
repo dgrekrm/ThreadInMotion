@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ThreadInMotion.Library.DataAccessLayer\ThreadInMotion.Library.DataAccessLayer.csproj" />
     <ProjectReference Include="..\ThreadInMotion.Library.SharedModels\ThreadInMotion.Library.SharedModels.csproj" />
   </ItemGroup>
